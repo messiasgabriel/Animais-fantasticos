@@ -10,10 +10,21 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
+  
   <div class="grid-container">
     <nav class="menu" data-menu="suave">
-      <ul>
+      <button data-menu="button" aria-expanded="false" aria-controls="menu">Menu</button>
+      <ul data-menu="list" id="menu">
         <li><a href="#animais">Animais</a></li>
+        <li data-dropdown>
+          <a href="sobre.html">Sobre</a>
+          <ul class="dropdown-menu">
+            <li><a href="empresa.html">A Empresa</a></li>
+            <li><a href="equipe.html">Equipe</a></li>
+            <li><a href="socios.html">Socios</a></li>
+            <li><a href="investidores.html">Investidores</a></li>
+          </ul>
+        </li>
         <li><a href="#faq">Faq</a></li>
         <li><a href="#contato">Contato</a></li>
         <li><a data-modal="abrir" href="login.html">Login</a></li>
@@ -142,6 +153,12 @@
       </dl>
     </section>
 
+    <section class="grid-section numeros" data-anime="scroll">
+      <h1 class="titulo">Numeros</h1>
+      <div class="numeros-grid">
+      </div>
+    </section>
+
     <section class="grid-section contato" data-anime="scroll" id="contato">
       <h1 class="titulo">Contato</h1>
       <div class="mapa" data-tooltip aria-label="Endereço próximo ao estacionamento.">
@@ -152,13 +169,17 @@
         <li>+55 (21) 9999-9999</li>
         <li>Rua do Conde, nº 21</li>
         <li>Rio de Janeiro - RJ</li>
+        <li>Doe <span class="btc-preco">0</span> bitcoin para nos ajudar</li>
+        <li data-semana="1,2,3,4,5" data-horario="8, 18">Seg a Sex das 8 ás 18</li>
       </ul>
     </section>
 
     <footer class="copy">
       <p>Todos os direitos reservados.</p>
     </footer>
+
   </div>
+
   <section class="modal-container" data-modal="container">
     <div class="modal">
       <button data-modal="fechar" class="fechar">x</button>
